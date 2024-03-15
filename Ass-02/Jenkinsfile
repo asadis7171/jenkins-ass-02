@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build Docker Image') {
+        stage('Build Docker Dev Image') {
             when {
                 branch 'dev'
             }
@@ -16,7 +16,7 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build Docker QA Image') {
             when {
                 branch 'qa'
             }
