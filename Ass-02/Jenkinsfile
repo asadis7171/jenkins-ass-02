@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
                     def app = docker.build("asadis7171/qa:latest")
-                    docker.withRegistry('https://registry.hub.docker.com/asadis7171/dev', 'docker-cred') {
+                    docker.withRegistry('https://registry.hub.docker.com/asadis7171/qa', 'docker-cred') {
                         app.push()
                     }
                 }
